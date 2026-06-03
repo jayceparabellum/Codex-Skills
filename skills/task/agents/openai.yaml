@@ -1,0 +1,4 @@
+interface:
+  display_name: "Task"
+  short_description: "Pick up the next unchecked task group from docs$task_LIST.md and start implementing it " reads project docs for con..."
+  default_prompt: "Use $task for this workflow."

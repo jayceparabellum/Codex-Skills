@@ -1,0 +1,4 @@
+interface:
+  display_name: "In Distribution"
+  short_description: "Recommend the most in-distribution tooling/stack/approach for a topic when working with Codex. Use when the user invo..."
+  default_prompt: "Use $in-distribution for this workflow."

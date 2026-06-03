@@ -1,0 +1,4 @@
+interface:
+  display_name: "Dev Setup"
+  short_description: "Walk a new developer through installing every CLI tool the project's workflows assume " local-dev, infra/deploy, an..."
+  default_prompt: "Use $dev-setup for this workflow."

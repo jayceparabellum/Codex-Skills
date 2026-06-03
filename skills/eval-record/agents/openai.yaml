@@ -1,0 +1,4 @@
+interface:
+  display_name: "Eval Record"
+  short_description: "Record one or more Clinical Co-Pilot eval snapshots by invoking the live agent (real LLM + FHIR calls). Use when the ..."
+  default_prompt: "Use $eval-record for this workflow."

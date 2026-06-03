@@ -1,0 +1,4 @@
+interface:
+  display_name: "Llm Council"
+  short_description: "Run any question, idea, or decision through a council of 5 AI advisors who independently analyze it, peer-review each..."
+  default_prompt: "Use $llm-council for this workflow."

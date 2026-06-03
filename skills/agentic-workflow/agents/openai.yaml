@@ -1,0 +1,4 @@
+interface:
+  display_name: "Agentic Workflow"
+  short_description: "End-to-end workflow for delivering a new feature with agent assistance " clean tree ' PRD ' branch ' PRD-only..."
+  default_prompt: "Use $agentic-workflow for this workflow."

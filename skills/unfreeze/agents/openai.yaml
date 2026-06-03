@@ -1,0 +1,4 @@
+interface:
+  display_name: "Unfreeze"
+  short_description: "Lift the Hetzner deploy freeze after Gauntlet grader feedback is received " confirm feedback, run $ship-check, push..."
+  default_prompt: "Use $unfreeze for this workflow."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Skill Lifecycle"
+  short_description: "Observe, inspect, amend, and evaluate skills for continuous improvement - use after skill failures, to analyze skill ..."
+  default_prompt: "Use $skill-lifecycle for this workflow."

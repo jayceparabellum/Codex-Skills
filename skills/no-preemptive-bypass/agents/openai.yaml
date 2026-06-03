@@ -1,0 +1,4 @@
+interface:
+  display_name: "No Preemptive Bypass"
+  short_description: "Hard rule against bypassing safety mechanisms (pre-push hooks, type checks, pre-commit checks, CI gates, validators, ..."
+  default_prompt: "Use $no-preemptive-bypass for this workflow."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Memory Curate"
+  short_description: "Walk every entry in the user's auto-memory directory, ask whether each is still true and still useful, then update or..."
+  default_prompt: "Use $memory-curate for this workflow."

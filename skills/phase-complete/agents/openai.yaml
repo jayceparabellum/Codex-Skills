@@ -1,0 +1,4 @@
+interface:
+  display_name: "Phase Complete"
+  short_description: "Run the end-of-phase ceremony " $correct on the full phase diff, optional task-list update, and a clean handoff. Us..."
+  default_prompt: "Use $phase-complete for this workflow."

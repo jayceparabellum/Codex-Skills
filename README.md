@@ -30,3 +30,31 @@ Use $ai-verification-discipline before we call this complete.
 Use $ai-deployment-debugging to diagnose this failed deploy.
 Use $clarity to rewrite my rough prompt before acting on it.
 ```
+
+## Converted Claude Skills
+
+The `skills/` folder also includes converted Claude skills from `claude-skills-export.zip`:
+
+- `agentic-workflow`
+- `correct`
+- `demo-prep`
+- `dev-setup`
+- `eval-gate`
+- `eval-record`
+- `gauntlet-submit`
+- `grill-me`
+- `in-distribution`
+- `llm-council`
+- `memory-curate`
+- `no-preemptive-bypass`
+- `phase-complete`
+- `prd`
+- `pre-search-checklist`
+- `prove-it`
+- `scaffold`
+- `ship-check`
+- `skill-lifecycle`
+- `task`
+- `unfreeze`
+
+These were normalized for Codex frontmatter, Codex-style `$skill-name` toggles, and ASCII-safe validation.

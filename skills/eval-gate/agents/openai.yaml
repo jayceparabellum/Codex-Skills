@@ -1,0 +1,4 @@
+interface:
+  display_name: "Eval Gate"
+  short_description: "Run the Clinical Co-Pilot eval gate (snapshot replay) and report golden / labeled pass rates plus any failures. Use w..."
+  default_prompt: "Use $eval-gate for this workflow."

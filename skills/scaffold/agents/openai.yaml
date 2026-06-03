@@ -1,0 +1,4 @@
+interface:
+  display_name: "Scaffold"
+  short_description: "Use when presearch phase is complete and user is ready to generate project documentation files - works for both green..."
+  default_prompt: "Use $scaffold for this workflow."

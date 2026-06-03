@@ -1,0 +1,4 @@
+interface:
+  display_name: "Prove It"
+  short_description: "|"
+  default_prompt: "Use $prove-it for this workflow."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Demo Prep"
+  short_description: "Prepare a feature for in-browser verification " start the project's dev server, surface the URL and login, list the..."
+  default_prompt: "Use $demo-prep for this workflow."

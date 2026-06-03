@@ -1,0 +1,4 @@
+interface:
+  display_name: "Pre Search Checklist"
+  short_description: "Walk the user through a structured pre-search checklist before they start building an AI agent or LLM-powered applica..."
+  default_prompt: "Use $pre-search-checklist for this workflow."

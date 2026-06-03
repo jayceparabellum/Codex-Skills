@@ -1,0 +1,4 @@
+interface:
+  display_name: "Prd"
+  short_description: "Scaffold a new Product Requirements Document (PRD) in docs$prds/ by interrogating the user about the feature, success..."
+  default_prompt: "Use $prd for this workflow."
