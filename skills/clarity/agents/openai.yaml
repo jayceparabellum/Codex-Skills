@@ -1,0 +1,4 @@
+interface:
+  display_name: "Clarity"
+  short_description: "Clean up raw prompts into clear, efficient instructions."
+  default_prompt: "Use clarity to rewrite my rough prompt into a clearer request before acting on it."
