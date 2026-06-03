@@ -1,0 +1,4 @@
+interface:
+  display_name: "AI Spec Writing"
+  short_description: "Turn fuzzy AI engineering work into crisp specs."
+  default_prompt: "Use ai-spec-writing to clarify the goal, constraints, acceptance checks, and implementation slices before coding."

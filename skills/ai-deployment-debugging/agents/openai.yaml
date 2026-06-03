@@ -1,0 +1,4 @@
+interface:
+  display_name: "AI Deployment Debugging"
+  short_description: "Debug deploys from logs, environment, and reproducible checks."
+  default_prompt: "Use ai-deployment-debugging to diagnose deployment or runtime failures from evidence before making changes."

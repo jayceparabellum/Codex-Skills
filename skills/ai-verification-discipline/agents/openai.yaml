@@ -1,0 +1,4 @@
+interface:
+  display_name: "AI Verification Discipline"
+  short_description: "Prove work is done with tests, runs, and evidence."
+  default_prompt: "Use ai-verification-discipline to build and execute an evidence checklist before declaring work complete."
