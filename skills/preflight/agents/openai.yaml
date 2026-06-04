@@ -1,0 +1,4 @@
+interface:
+  display_name: "Preflight"
+  short_description: "Check goal, state, risk, and proof before edits."
+  default_prompt: "Use preflight before coding or changing files."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Proof Before Done"
+  short_description: "Require evidence before claiming work is complete."
+  default_prompt: "Use proof-before-done before finalizing any task."

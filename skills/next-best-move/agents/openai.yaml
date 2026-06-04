@@ -1,0 +1,4 @@
+interface:
+  display_name: "Next Best Move"
+  short_description: "Rank next actions by deadline, impact, dependency, and risk."
+  default_prompt: "Use next-best-move to decide the highest-leverage next step."

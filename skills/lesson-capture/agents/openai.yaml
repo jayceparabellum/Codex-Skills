@@ -1,0 +1,4 @@
+interface:
+  display_name: "Lesson Capture"
+  short_description: "Extract reusable lessons and process improvements after work."
+  default_prompt: "Use lesson-capture to capture what changed, what worked, what failed, and what rule to keep."
