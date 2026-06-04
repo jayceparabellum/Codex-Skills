@@ -1,4 +1,4 @@
 interface:
   display_name: "Gauntlet Submit"
-  short_description: "Walk through the Sunday Gauntlet AI submission flow " verify the freeze rule, run $ship-check, draft the submission..."
+  short_description: "Walk through the Sunday Gauntlet AI submission flow " verify the freeze rule, run $ai-verification-discipline, draft the submission..."
   default_prompt: "Use $gauntlet-submit for this workflow."

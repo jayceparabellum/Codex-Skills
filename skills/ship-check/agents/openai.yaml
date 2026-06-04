@@ -1,4 +1,0 @@
-interface:
-  display_name: "Ship Check"
-  short_description: "Pre-push readiness checklist for the current branch. Runs $correct (branch-vs-default-branch scope), the project's ev..."
-  default_prompt: "Use $ship-check for this workflow."

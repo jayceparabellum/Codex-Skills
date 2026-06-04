@@ -1,6 +1,6 @@
 ---
 name: prove-it
-description: "End-to-end agent-driven proof that a UI implementation actually works. Run AFTER planning, implementation, $correct, and any QA \" when the coding agent believes the task is complete and BEFORE $ship-check. Walks the exact user flow that was just built using browser automation, verifies pages load, interactions succeed, no console errors, output matches design system, then captures a final proof screenshot. If anything fails, surface it with evidence and stop \" do NOT mark complete until 100% confident. Use when the user says \"prove it\", \"verify the implementation\", \"show me it works\", \"confirm the feature works end-to-end\", or invokes $prove-it. Auto-suggest after implementation + $correct pass and before $ship-check, ONLY for UI-touching changes. STATUS: dormant until a browser automation tool is installed (see Step 1 pre-flight)."
+description: "End-to-end agent-driven proof that a UI implementation actually works. Run AFTER planning, implementation, $correct, and any QA \" when the coding agent believes the task is complete and BEFORE $ai-verification-discipline. Walks the exact user flow that was just built using browser automation, verifies pages load, interactions succeed, no console errors, output matches design system, then captures a final proof screenshot. If anything fails, surface it with evidence and stop \" do NOT mark complete until 100% confident. Use when the user says \"prove it\", \"verify the implementation\", \"show me it works\", \"confirm the feature works end-to-end\", or invokes $prove-it. Auto-suggest after implementation + $correct pass and before $ai-verification-discipline, ONLY for UI-touching changes. STATUS: dormant until a browser automation tool is installed (see Step 1 pre-flight)."
 ---
 
 # $prove-it " End-to-End Implementation Proof
@@ -11,7 +11,7 @@ This is the *agent-verifies* counterpart to [demo-prep](..$demo-prep/SKILL.md), 
 
 ## Iron law
 
-**Cannot return success without a screenshot of the working feature.** No screenshot, no proof. No exceptions. For backend-only changes with no observable UI, this skill does not apply " use logs/tests as proof and run `$correct` + `$ship-check` instead.
+**Cannot return success without a screenshot of the working feature.** No screenshot, no proof. No exceptions. For backend-only changes with no observable UI, this skill does not apply " use logs/tests as proof and run `$correct` + `$ai-verification-discipline` instead.
 
 ## Hard precondition: a browser automation tool
 
@@ -27,7 +27,7 @@ If none of these is present, **stop in Step 1 pre-flight** and tell the user the
 
 - Coding agent finished implementing a UI feature/fix on a feature branch (or master, where that workflow applies).
 - `$correct` has passed.
-- About to run `$ship-check` and push / deploy.
+- About to run `$ai-verification-discipline` and push / deploy.
 - the user explicitly asked for verification.
 
 Do NOT invoke during planning, mid-implementation, for backend-only changes (API endpoints, data/permission resolvers, prompts), or for changes whose only surface is a CLI command.
@@ -152,7 +152,7 @@ Confidence: <0"100>%
 If `SHIP`:
 
 - Print the proof screenshot path.
-- Suggest: "Run `$ship-check` next, then commit + push (and redeploy if the project has a deploy step)."
+- Suggest: "Run `$ai-verification-discipline` next, then commit + push (and redeploy if the project has a deploy step)."
 - Offer to embed the screenshot path in the commit body.
 
 If `DO NOT SHIP`:
@@ -185,4 +185,4 @@ When one is installed, the pre-flight in Step 1 will detect it and the skill bec
 
 - This skill is read-only by default " it does not modify source code. The only writes are screenshots under `.prove-it/` and the verdict report.
 - Add `.prove-it/` to `.gitignore` on first run if not already present.
-- For backend-only or CLI-only features, the proof artifact is the actual command output and a passing test run " but say so explicitly and explain why no screenshot. In practice, prefer `$correct` + the project's test/eval gate + `$ship-check` for those.
+- For backend-only or CLI-only features, the proof artifact is the actual command output and a passing test run " but say so explicitly and explain why no screenshot. In practice, prefer `$correct` + the project's test/eval gate + `$ai-verification-discipline` for those.

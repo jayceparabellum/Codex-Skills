@@ -52,7 +52,6 @@ The `skills/` folder also includes converted Claude skills from `claude-skills-e
 - `pre-search-checklist`
 - `prove-it`
 - `scaffold`
-- `ship-check`
 - `skill-lifecycle`
 - `task`
 - `unfreeze`

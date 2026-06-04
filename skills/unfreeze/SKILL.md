@@ -1,6 +1,6 @@
 ---
 name: unfreeze
-description: "Lift the Hetzner deploy freeze after Gauntlet grader feedback is received \" confirm feedback, run $ship-check, push to origin/master with explicit per-push authorization, push to the hetzner remote with explicit per-push authorization, then remove the freeze memory entry. Use when the user says \"unfreeze\", \"lift the freeze\", \"deploy now\", or \"feedback received\". Each push requires its own per-instance \"yes."
+description: "Lift the Hetzner deploy freeze after Gauntlet grader feedback is received \" confirm feedback, run $ai-verification-discipline, push to origin/master with explicit per-push authorization, push to the hetzner remote with explicit per-push authorization, then remove the freeze memory entry. Use when the user says \"unfreeze\", \"lift the freeze\", \"deploy now\", or \"feedback received\". Each push requires its own per-instance \"yes."
 ---
 
 # unfreeze
@@ -11,7 +11,7 @@ Reverse the Hetzner deploy freeze defined in the user's memory `project_hetzner_
 
 1. **Per-push authorization.** Each push to a protected remote (`origin/master`, `hetzner`) requires its own explicit "yes." Do not infer authorization from "go ahead and unfreeze."
 2. **No preemptive bypass.** Never add `--force`, `--no-verify`, or any other flag before the bare command has actually run.
-3. **$ship-check must PASS** before any push to a protected remote. A FAIL stops the unfreeze.
+3. **$ai-verification-discipline must PASS** before any push to a protected remote. A FAIL stops the unfreeze.
 
 ## Step 1 " Confirm grader feedback was actually received
 
@@ -26,18 +26,18 @@ Acceptable answers:
 
 Do not assume "the user invoked $unfreeze" implies feedback was received.
 
-## Step 2 " Run $ship-check on the branch being deployed
+## Step 2 " Run $ai-verification-discipline on the branch being deployed
 
 Ask which branch is going to master. Most commonly this is the active feature branch.
 
-Invoke `$ship-check` on that branch. The result must be **PASS** to continue.
+Invoke `$ai-verification-discipline` on that branch. The result must be **PASS** to continue.
 
 If FAIL:
 - Report the specific failures.
 - Stop. Do not push to any protected remote.
 - Recommend fixes; loop back to Step 2 once the user is ready.
 
-Note: the master branch CI has a known whitespace failure that the freeze intentionally left unfixed. After feedback, that fix may need to land before pushing " surface this to the user during ship-check if the conventional-commits or working-tree check catches it.
+Note: the master branch CI has a known whitespace failure that the freeze intentionally left unfixed. After feedback, that fix may need to land before pushing " surface this to the user during verification check if the conventional-commits or working-tree check catches it.
 
 ## Step 3 " Push to origin/master (with explicit per-push authorization)
 
@@ -106,7 +106,7 @@ Print a concise summary:
 ```
 unfreeze complete:
   feedback received:    yes
-  $ship-check:          PASS
+  $ai-verification-discipline:          PASS
   pushed to origin:     <branch> ' master  (commit <sha>)
   pushed to hetzner:    master  (commit <sha>)
   freeze memory:        removed

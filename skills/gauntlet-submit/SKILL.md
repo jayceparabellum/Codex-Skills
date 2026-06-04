@@ -1,6 +1,6 @@
 ---
 name: gauntlet-submit
-description: "Walk through the Sunday Gauntlet AI submission flow \" verify the freeze rule, run $ship-check, draft the submission tweet (tagging @GauntletAI from @the userVoegeli), and explicitly do NOT push to origin/master or hetzner until grader feedback is received. Use when the user says \"submit to gauntlet\", \"prep submission\", \"submission flow\", or \"Sunday submit\"."
+description: "Walk through the Sunday Gauntlet AI submission flow \" verify the freeze rule, run $ai-verification-discipline, draft the submission tweet (tagging @GauntletAI from @the userVoegeli), and explicitly do NOT push to origin/master or hetzner until grader feedback is received. Use when the user says \"submit to gauntlet\", \"prep submission\", \"submission flow\", or \"Sunday submit\"."
 ---
 
 # gauntlet-submit
@@ -13,7 +13,7 @@ These come from the user's memory and Codex-level rules. Before doing anything e
 
 1. **Hetzner deploy freeze is active.** No pushes to `origin/master` or the `hetzner` remote until the Sunday submission is graded AND grader feedback is received. The master CI whitespace failure intentionally remains unfixed during this window.
 2. **Branch-only.** Feature-branch work stays on the branch. No merge to master without an explicit per-merge "do it now."
-3. **`$correct` runs end-of-phase AND before each push.** The `$ship-check` step below covers the pre-push side.
+3. **`$correct` runs end-of-phase AND before each push.** The `$ai-verification-discipline` step below covers the pre-push side.
 4. **Twitter post:** the user is `@the userVoegeli`; tag `@GauntletAI` in the submission post.
 
 If the user wants to violate any of these, **stop and confirm explicitly** " do not infer authorization from the submission context.
@@ -28,11 +28,11 @@ Ask the user:
 
 Do not guess deliverables from the codebase. Submissions are externally defined.
 
-## Step 2 " Run $ship-check on the submission branch
+## Step 2 " Run $ai-verification-discipline on the submission branch
 
-Invoke `$ship-check`. The submission branch must PASS before the tweet goes out.
+Invoke `$ai-verification-discipline`. The submission branch must PASS before the tweet goes out.
 
-If `$ship-check` reports FAIL:
+If `$ai-verification-discipline` reports FAIL:
 - Report the specific failures.
 - Stop. Do not draft the submission tweet on a branch that is not ship-ready.
 - Recommend fixes. Loop back to Step 2 once fixed.
@@ -63,13 +63,13 @@ Show the draft to the user. Iterate until they say "post it" " do **not** post i
 Tell the user clearly:
 
 1. The freeze remains active. Do not push to `origin/master` or `hetzner`.
-2. When grader feedback arrives, the unfreeze flow is `$unfreeze` (which will run `$ship-check` again, push to `origin/master`, push to `hetzner`, and remove the freeze memory entry).
+2. When grader feedback arrives, the unfreeze flow is `$unfreeze` (which will run `$ai-verification-discipline` again, push to `origin/master`, push to `hetzner`, and remove the freeze memory entry).
 3. Until then, normal feature-branch work continues; nothing is blocked except the two protected remotes.
 
 ## What this skill never does
 
 - **Never posts the tweet.** The user posts it manually from their account.
 - **Never pushes to `origin/master` or `hetzner`** during this skill. That is `$unfreeze`'s job, after grader feedback.
-- **Never bypasses `$ship-check`.** A FAIL stops the submission flow.
+- **Never bypasses `$ai-verification-discipline`.** A FAIL stops the submission flow.
 - **Never edits the freeze memory file** in this skill. That happens in `$unfreeze`.
 - **Never assumes the deadline.** If the user has not stated it, ask.

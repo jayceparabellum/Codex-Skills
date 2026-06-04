@@ -74,11 +74,11 @@ chore(phase): wrap up phase <name>
 
 Do **not** commit automatically. The user owns commits per the standing branch-only rule.
 
-## Step 5 " Decide whether to ship-check
+## Step 5 " Decide whether to verification check
 
-Ask the user: "Are you about to push? If yes, the next step is `$ship-check` (which runs a separate `$correct` on branch-vs-default-branch scope plus the project's eval/test gate). If no, this phase is wrapped."
+Ask the user: "Are you about to push? If yes, the next step is `$ai-verification-discipline` (which runs a separate `$correct` on branch-vs-default-branch scope plus the project's eval/test gate). If no, this phase is wrapped."
 
-Do not run `$ship-check` automatically " it is a deliberate decision separate from phase completion.
+Do not run `$ai-verification-discipline` automatically " it is a deliberate decision separate from phase completion.
 
 ## Step 6 " Final report
 
@@ -89,12 +89,12 @@ phase complete: <name | unnamed>
   range:        <start-sha>..HEAD  (N commits)
   $correct:     <clean | N issues found and fixed>
   task list:    <updated: <items> | not present | unchanged>
-  next step:    <suggested $ship-check | done>
+  next step:    <suggested $ai-verification-discipline | done>
 ```
 
 ## What this skill never does
 
-- **Never runs `$ship-check` automatically.** End-of-phase and pre-push are separate decisions.
+- **Never runs `$ai-verification-discipline` automatically.** End-of-phase and pre-push are separate decisions.
 - **Never commits without user approval.**
 - **Never creates `docs$task_LIST.md`** if it does not exist.
 - **Never assumes the phase boundary.** Ask if not stated.
