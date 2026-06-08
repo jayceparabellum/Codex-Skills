@@ -1,0 +1,4 @@
+interface:
+  display_name: "CE Overnight"
+  short_description: "Run CE compounding, planning, and work overnight."
+  default_prompt: "Use ce-overnight to prepare and run a safe overnight Compound Engineering cycle."

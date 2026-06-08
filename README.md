@@ -11,6 +11,7 @@ Codex skills for strengthening an AI engineer's core operating process:
 - `preflight`: check goal, assumptions, repo state, risk, proof plan, and rollback before action.
 - `proof-before-done`: require concrete evidence before claiming completion.
 - `lesson-capture`: extract reusable process lessons after meaningful work or friction.
+- `ce-overnight`: run a safe overnight Compound Engineering cycle with `ce-compound`, `ce-plan`, and `ce-work`.
 
 ## Install
 
@@ -26,6 +27,7 @@ Copy-Item -Recurse .\skills\next-best-move $env:USERPROFILE\.codex\skills\
 Copy-Item -Recurse .\skills\preflight $env:USERPROFILE\.codex\skills\
 Copy-Item -Recurse .\skills\proof-before-done $env:USERPROFILE\.codex\skills\
 Copy-Item -Recurse .\skills\lesson-capture $env:USERPROFILE\.codex\skills\
+Copy-Item -Recurse .\skills\ce-overnight $env:USERPROFILE\.codex\skills\
 ```
 
 Restart Codex after installing or updating skills so they are re-indexed.
@@ -44,6 +46,7 @@ Use $next-best-move to choose what matters next.
 Use $preflight before editing files.
 Use $proof-before-done before calling this complete.
 Use $lesson-capture to save what we learned from this task.
+Use $ce-overnight to prepare and run a safe overnight Compound Engineering cycle.
 ```
 
 ## Converted Claude Skills
