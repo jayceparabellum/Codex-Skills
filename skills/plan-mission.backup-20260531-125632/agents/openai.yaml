@@ -1,0 +1,4 @@
+interface:
+  display_name: "Plan Mission"
+  short_description: "Turn fuzzy goals into build-ready plans"
+  default_prompt: "Use $plan-mission to turn this app idea into a validated Mission Blueprint."

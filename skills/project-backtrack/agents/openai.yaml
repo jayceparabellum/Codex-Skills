@@ -1,0 +1,4 @@
+interface:
+  display_name: "Project Backtrack"
+  short_description: "Reconstruct a project story in plain English."
+  default_prompt: "Use $project-backtrack to explain this project from history to current state."

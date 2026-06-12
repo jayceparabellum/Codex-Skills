@@ -1,77 +1,52 @@
-# AI Engineer Process Skills
+# Codex Skills
 
-Codex skills for strengthening an AI engineer's core operating process:
+Full mirror of Jayce's installed Codex skills.
 
-- `clarity`: clean up rough prompts into clear, efficient instructions.
-- `ai-spec-writing`: turn fuzzy requests into testable implementation specs.
-- `ai-verification-discipline`: prove work is done with checks and evidence.
-- `ai-deployment-debugging`: debug deploy/runtime failures from logs and environment facts.
-- `scope-lock`: freeze work into must-have, should-have, later, and non-goals.
-- `next-best-move`: rank possible next actions by deadline, impact, dependency, risk, and effort.
-- `preflight`: check goal, assumptions, repo state, risk, proof plan, and rollback before action.
-- `proof-before-done`: require concrete evidence before claiming completion.
-- `lesson-capture`: extract reusable process lessons after meaningful work or friction.
-- `ce-overnight`: run a safe overnight Compound Engineering cycle with `ce-compound`, `ce-plan`, and `ce-work`.
+## Current Snapshot
 
-## Install
+- Skill directories: 199
+- Source: `C:\Users\jayce\.codex\skills`
+- Destination in repo: `skills/`
+- Synced for: Codex skill backup, sharing, migration, and cross-machine restore
 
-Copy any skill folder from `skills/` into your Codex skills directory:
+## Install Or Restore
+
+Copy one skill:
 
 ```powershell
-Copy-Item -Recurse .\skills\ai-spec-writing $env:USERPROFILE\.codex\skills\
-Copy-Item -Recurse .\skills\ai-verification-discipline $env:USERPROFILE\.codex\skills\
-Copy-Item -Recurse .\skills\ai-deployment-debugging $env:USERPROFILE\.codex\skills\
 Copy-Item -Recurse .\skills\clarity $env:USERPROFILE\.codex\skills\
-Copy-Item -Recurse .\skills\scope-lock $env:USERPROFILE\.codex\skills\
-Copy-Item -Recurse .\skills\next-best-move $env:USERPROFILE\.codex\skills\
-Copy-Item -Recurse .\skills\preflight $env:USERPROFILE\.codex\skills\
-Copy-Item -Recurse .\skills\proof-before-done $env:USERPROFILE\.codex\skills\
-Copy-Item -Recurse .\skills\lesson-capture $env:USERPROFILE\.codex\skills\
-Copy-Item -Recurse .\skills\ce-overnight $env:USERPROFILE\.codex\skills\
+```
+
+Copy all skills:
+
+```powershell
+Copy-Item -Recurse .\skills\* $env:USERPROFILE\.codex\skills\ -Force
 ```
 
 Restart Codex after installing or updating skills so they are re-indexed.
 
-## Toggle Usage
+## Important Skills In This Snapshot
 
-Invoke the skills directly when you want that mode of work:
+- `clarity`
+- `preflight`
+- `scope-lock`
+- `proof-before-done`
+- `lesson-capture`
+- `ce-overnight`
+- `vision-from-discovery-call`
+- GSD workflow skills
+- GStack workflow skills
+- Compound Engineering skills
+- Converted Claude-compatible skills
 
-```text
-Use $ai-spec-writing to turn this assignment into a plan.
-Use $ai-verification-discipline before we call this complete.
-Use $ai-deployment-debugging to diagnose this failed deploy.
-Use $clarity to rewrite my rough prompt before acting on it.
-Use $scope-lock to control scope before implementation.
-Use $next-best-move to choose what matters next.
-Use $preflight before editing files.
-Use $proof-before-done before calling this complete.
-Use $lesson-capture to save what we learned from this task.
-Use $ce-overnight to prepare and run a safe overnight Compound Engineering cycle.
-```
+## Vision From Discovery Call
 
-## Converted Claude Skills
+The `vision-from-discovery-call` skill runs the full discovery-call intake in one batch and produces:
 
-The `skills/` folder also includes converted Claude skills from `claude-skills-export.zip`:
+1. `PVD.md`
+2. `PRD-v1.md`
+3. final `PRD.pdf` on the user's Desktop area
 
-- `agentic-workflow`
-- `correct`
-- `demo-prep`
-- `dev-setup`
-- `eval-gate`
-- `eval-record`
-- `gauntlet-submit`
-- `grill-me`
-- `in-distribution`
-- `llm-council`
-- `memory-curate`
-- `no-preemptive-bypass`
-- `phase-complete`
-- `prd`
-- `pre-search-checklist`
-- `prove-it`
-- `scaffold`
-- `skill-lifecycle`
-- `task`
-- `unfreeze`
+## Notes
 
-These were normalized for Codex frontmatter, Codex-style `$skill-name` toggles, and ASCII-safe validation.
+This repository is intended to hold portable skill instructions and bundled resources. Runtime state, auth files, logs, caches, and local Codex databases should not be committed.

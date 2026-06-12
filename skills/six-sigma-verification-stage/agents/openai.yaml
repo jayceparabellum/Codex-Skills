@@ -1,0 +1,4 @@
+interface:
+  display_name: "Six Sigma Verification Stage"
+  short_description: "DMAIC verification and control gate"
+  default_prompt: "Use $six-sigma-verification-stage to audit this plan with Six Sigma verification gates."

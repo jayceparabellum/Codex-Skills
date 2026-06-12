@@ -1,0 +1,32 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "tasks.json — the work graph (the single source of truth for work)",
+  "description": "Written by the Planner; frozen during a build (a change to scope means a re-plan, not an in-flight edit). At runtime, the execution system is the sole writer of task state.",
+  "type": "object",
+  "required": ["mission_id", "tasks"],
+  "properties": {
+    "mission_id": { "type": "string" },
+    "created_by": { "type": "string", "description": "the Planner version that emitted this" },
+    "frozen": { "type": "boolean", "default": true, "description": "immutable during a build; change = re-plan" },
+    "tasks": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "goal", "success_criteria", "owner_role", "state"],
+        "properties": {
+          "id": { "type": "string" },
+          "goal": { "type": "string" },
+          "inputs": { "type": "array", "items": { "type": "string" } },
+          "file_whitelist": { "type": "array", "items": { "type": "string" }, "description": "the ONLY files this task may touch (strict scope + clean worktree partition)" },
+          "success_criteria": { "type": "array", "items": { "type": "string" } },
+          "deps": { "type": "array", "items": { "type": "string" } },
+          "owner_role": { "type": "string", "description": "worker role (see the execution system's worker roster)" },
+          "state": { "enum": ["pending", "assigned", "in_progress", "blocked", "done", "failed"] },
+          "assigned_to": { "type": ["string", "null"], "description": "manager/orchestrator name; set by the execution system" },
+          "attempts": { "type": "integer", "default": 0 },
+          "irreversible": { "type": "boolean", "default": false, "description": "guarded by a once-flag + a human gate before the build performs it" }
+        }
+      }
+    }
+  }
+}

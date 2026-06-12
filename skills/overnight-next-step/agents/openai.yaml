@@ -1,0 +1,4 @@
+interface:
+  display_name: "Overnight Next Step"
+  short_description: "Repeat ce-work safely overnight"
+  default_prompt: "Use $overnight-next-step to continue implementing the next pending project step overnight."

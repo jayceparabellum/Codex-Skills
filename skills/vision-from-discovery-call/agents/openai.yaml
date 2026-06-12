@@ -1,0 +1,4 @@
+interface:
+  display_name: "Vision from Discovery Call"
+  short_description: "Batched vision intake before planning"
+  default_prompt: "Use $vision-from-discovery-call to ask the full vision intake in one batch and produce PVD.md, then PRD-v1.md and PRD.pdf."

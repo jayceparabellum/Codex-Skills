@@ -1,0 +1,4 @@
+interface:
+  display_name: "CE Next Step"
+  short_description: "Run ce-work for the next implementation step."
+  default_prompt: "Use $ce-next-step to implement the next step."
